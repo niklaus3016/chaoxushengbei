@@ -1,0 +1,38 @@
+# ===== Node.js / Vite / 前端构建 =====
+node_modules/
+dist/
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.serverless/
+
+# ===== IDE / Editor =====
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ===== Capacitor / Android 构建产物 =====
+android/.gradle/
+android/app/build/
+android/app/release/
+android/app/debug/
+android/app/captures/
+android/build/
+android/local.properties
+android/capacitor-cordova-android-plugins/build/
+android/capacitor-cordova-android-plugins/src/main/libs/
+*.apk
+*.aab
+*.ap_
+
+# ===== OS =====
+.DS_Store

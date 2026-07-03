@@ -1,0 +1,6 @@
+{
+  "name": "潮序圣杯",
+  "description": "沉浸式潮汕传统掷圣杯民俗模拟工具，纯前端离线运行，复刻传统双手握持、扬手抛杯仪式动作，主打真实触感、国风非遗质感与静心祈福体验。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
