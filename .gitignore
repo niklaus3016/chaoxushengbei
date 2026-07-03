@@ -36,3 +36,8 @@ android/capacitor-cordova-android-plugins/src/main/libs/
 
 # ===== OS =====
 .DS_Store
+# ===== Android Release Keystore (NEVER commit) =====
+my-release-key.keystore
+*.jks
+*.keystore
+android/app/my-release-key.keystore
