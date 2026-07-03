@@ -51,16 +51,19 @@ android {
         abortOnError false
     } 
     
-    // 添加签名配置
+    // 添加签名配置（仅当本地 keystore 文件存在时启用；CI 环境通过命令行 -Pandroid.injected.signing.* 注入）
+    def keystoreFile = file('../my-release-key.keystore')
     signingConfigs {
-        release {
-            storeFile file('../my-release-key.keystore')
-            storePassword System.getenv('KEYSTORE_PASSWORD') ?: '123456'
-            keyAlias 'chaoxushengbei'
-            keyPassword System.getenv('KEYSTORE_PASSWORD') ?: '123456'
-            v1SigningEnabled true
-            v2SigningEnabled true
-            storeType 'JKS'
+        if (keystoreFile.exists()) {
+            release {
+                storeFile keystoreFile
+                storePassword System.getenv('KEYSTORE_PASSWORD') ?: '123456'
+                keyAlias 'chaoxushengbei'
+                keyPassword System.getenv('KEYSTORE_PASSWORD') ?: '123456'
+                v1SigningEnabled true
+                v2SigningEnabled true
+                storeType 'JKS'
+            }
         }
     }
     
@@ -68,7 +71,10 @@ android {
         release { 
             minifyEnabled false 
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro' 
-            signingConfig signingConfigs.release
+            // CI 会通过 -Pandroid.injected.signing.* 覆盖签名；本地有 keystore 时走 signingConfigs.release
+            if (keystoreFile.exists()) {
+                signingConfig signingConfigs.release
+            }
         } 
     } 
 }

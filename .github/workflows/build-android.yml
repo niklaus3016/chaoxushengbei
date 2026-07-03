@@ -100,9 +100,12 @@ jobs:
         cd android
         echo "=== Cleaning Gradle build caches (once) ==="
         ./gradlew clean
+        KEYSTORE_ABS="$GITHUB_WORKSPACE/android/my-release-key.keystore"
+        echo "=== Keystore absolute path = $KEYSTORE_ABS ==="
+        ls -la "$KEYSTORE_ABS"
         echo "=== Building Release APK ==="
         ./gradlew assembleRelease --no-build-cache --no-daemon \
-          -Pandroid.injected.signing.store.file=my-release-key.keystore \
+          -Pandroid.injected.signing.store.file="$KEYSTORE_ABS" \
           -Pandroid.injected.signing.store.password="${{ secrets.KEYSTORE_PASSWORD }}" \
           -Pandroid.injected.signing.key.alias="${{ secrets.KEY_ALIAS }}" \
           -Pandroid.injected.signing.key.password="${{ secrets.KEY_PASSWORD }}"
