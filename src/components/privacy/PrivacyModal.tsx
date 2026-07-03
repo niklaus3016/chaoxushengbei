@@ -95,7 +95,7 @@ export const PrivacyModal = ({
         <button
           onClick={onAccept}
           type="button"
-          className="flex-1 py-4 text-base font-medium text-black bg-linear-to-b from-[#e6c78a] via-[#c5a059] to-[#8a6c3a] hover:brightness-110 rounded-br-[28px] transition-all shadow-[0_0_18px_rgba(197,160,89,0.25)] tracking-wider"
+          className="flex-1 py-4 text-base font-medium text-black bg-gradient-to-b from-[#e6c78a] via-[#c5a059] to-[#8a6c3a] hover:brightness-110 rounded-br-[28px] transition-all shadow-[0_0_18px_rgba(197,160,89,0.25)] tracking-wider"
         >
           同意并继续
         </button>

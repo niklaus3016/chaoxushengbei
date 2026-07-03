@@ -15,7 +15,7 @@ export const PrivacyPolicyContent = () => (
       <strong className="text-stone-400">生效日期</strong>：2026年07月03日
     </p>
 
-    <div className="bg-linear-to-r from-[#c5a059]/10 via-[#c5a059]/5 to-transparent p-5 rounded-xl border-l-4 border-[#c5a059] mb-6">
+    <div className="bg-gradient-to-r from-[#c5a059]/10 via-[#c5a059]/5 to-transparent p-5 rounded-xl border-l-4 border-[#c5a059] mb-6">
       <p className="text-stone-300 text-sm">
         欢迎使用「<strong className="text-[#c5a059]">潮序圣杯</strong>」（以下简称"本应用"）。
         本应用由<strong>光年跃迁（温州）科技有限公司</strong>（以下简称"我们"）开发并运营。

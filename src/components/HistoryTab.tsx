@@ -121,7 +121,7 @@ export const HistoryTab: React.FC<HistoryTabProps> = ({
             <button
               id="empty_state_go_btn"
               onClick={onNavigateToThrow}
-              className="mt-5 px-5 py-2 bg-linear-to-r from-[#c5a059]/20 to-[#c5a059]/10 border border-[#c5a059]/30 rounded-xl text-xs text-[#c5a059] font-serif hover:opacity-90 transition-opacity cursor-pointer"
+              className="mt-5 px-5 py-2 bg-gradient-to-r from-[#c5a059]/20 to-[#c5a059]/10 border border-[#c5a059]/30 rounded-xl text-xs text-[#c5a059] font-serif hover:opacity-90 transition-opacity cursor-pointer"
             >
               立刻祈福抛杯
             </button>

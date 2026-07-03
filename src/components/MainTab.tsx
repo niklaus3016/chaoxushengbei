@@ -571,8 +571,8 @@ export const MainTab: React.FC<MainTabProps> = ({
       )}
 
       {/* Dynamic mist elements for deep serenity */}
-      <div className="absolute inset-x-0 top-0 h-40 bg-linear-to-b from-black/60 to-transparent pointer-events-none z-0" />
-      <div className="absolute bottom-24 inset-x-0 h-32 bg-linear-to-t from-black/80 to-transparent pointer-events-none z-0 animate-pulse duration-10000" />
+      <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/60 to-transparent pointer-events-none z-0" />
+      <div className="absolute bottom-24 inset-x-0 h-32 bg-gradient-to-t from-black/80 to-transparent pointer-events-none z-0 animate-pulse duration-10000" />
 
       {/* TOP HEADER: Gilded typography instructions (Editorial Aesthetic styled) */}
       <div className="w-full text-center pt-8 z-10 px-4">
@@ -657,11 +657,11 @@ export const MainTab: React.FC<MainTabProps> = ({
         {/* Glow bounds when fingers grip */}
         <div
           style={{ opacity: touchLeftHeld ? 0.8 : 0 }}
-          className="absolute left-0 inset-y-0 w-8 bg-linear-to-r from-amber-500/15 to-transparent border-l border-amber-500/40 pointer-events-none transition-opacity duration-300"
+          className="absolute left-0 inset-y-0 w-8 bg-gradient-to-r from-amber-500/15 to-transparent border-l border-amber-500/40 pointer-events-none transition-opacity duration-300"
         />
         <div
           style={{ opacity: touchRightHeld ? 0.8 : 0 }}
-          className="absolute right-0 inset-y-0 w-8 bg-linear-to-l from-amber-500/15 to-transparent border-r border-amber-500/40 pointer-events-none transition-opacity duration-300"
+          className="absolute right-0 inset-y-0 w-8 bg-gradient-to-l from-amber-500/15 to-transparent border-r border-amber-500/40 pointer-events-none transition-opacity duration-300"
         />
 
         {/* Left and Right Vertical Editorial Margins Text */}

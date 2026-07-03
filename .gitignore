@@ -41,3 +41,6 @@ my-release-key.keystore
 *.jks
 *.keystore
 android/app/my-release-key.keystore
+
+# ===== 本地参考文件夹（不上传） =====
+qitaapp/
