@@ -578,17 +578,17 @@ export const MainTab: React.FC<MainTabProps> = ({
       <div className="w-full text-center pt-8 z-10 px-4">
         {cupState === CupState.INITIAL && (
           <div className="animate-fade-in flex flex-col items-center">
-            <h1 className="text-[10px] tracking-[0.5em] text-stone-500 uppercase mb-3 font-light select-none">
+            <h1 className="text-[11px] tracking-[0.5em] text-stone-400 uppercase mb-3 font-medium select-none">
               Chaosu Ritual
             </h1>
-            <div className="text-2xl font-light tracking-[0.3em] text-[#c5a059] mb-1 font-serif select-none">
+            <div className="text-[28px] font-semibold tracking-[0.3em] text-[#c5a059] mb-2 font-serif select-none">
               潮序圣杯
             </div>
             <div className="h-px w-10 bg-[#c5a059]/35 mb-6"></div>
-            <p className="text-sm font-light text-stone-400 opacity-80 tracking-widest font-serif leading-relaxed">
+            <p className="text-[15px] font-medium text-stone-300 opacity-90 tracking-widest font-serif leading-relaxed">
               双手按住屏幕 • 长按上滑抛杯
             </p>
-            <p className="text-[10px] text-stone-600 mt-1 font-sans tracking-wide">
+            <p className="text-[11px] text-stone-500 mt-1.5 font-sans tracking-wide font-medium">
               虔诚静心，一事一问。双指模拟双手捧杯。
             </p>
           </div>
@@ -596,17 +596,17 @@ export const MainTab: React.FC<MainTabProps> = ({
 
         {cupState === CupState.HELD && (
           <div className="animate-pulse flex flex-col items-center">
-            <h1 className="text-[10px] tracking-[0.5em] text-[#c5a059] uppercase mb-3 font-light select-none">
+            <h1 className="text-[11px] tracking-[0.5em] text-[#c5a059] uppercase mb-3 font-semibold select-none">
               Ritual Prepared
             </h1>
-            <div className="text-2xl font-light tracking-[0.25em] text-stone-200 mb-1 font-serif select-none">
+            <div className="text-[28px] font-semibold tracking-[0.25em] text-stone-100 mb-2 font-serif select-none">
               双杯在手
             </div>
-            <div className="h-px w-10 bg-stone-700 mb-6"></div>
-            <p className="text-sm font-light text-[#c5a059] tracking-widest font-serif">
+            <div className="h-px w-10 bg-stone-600 mb-6"></div>
+            <p className="text-[15px] font-semibold text-[#c5a059] tracking-widest font-serif">
               双手已合捧 • 顺滑上抛
             </p>
-            <p className="text-amber-500/60 text-[9px] mt-1 font-mono tracking-wider uppercase">
+            <p className="text-amber-400/80 text-[10px] mt-1 font-mono tracking-wider uppercase font-semibold">
               Ready • Swipe upward slowly
             </p>
           </div>
@@ -614,14 +614,14 @@ export const MainTab: React.FC<MainTabProps> = ({
 
         {cupState === CupState.THROWING && (
           <div className="animate-pulse flex flex-col items-center">
-            <h1 className="text-[10px] tracking-[0.5em] text-stone-500 uppercase mb-3 font-light select-none">
+            <h1 className="text-[11px] tracking-[0.5em] text-stone-400 uppercase mb-3 font-medium select-none">
               Divination In Flight
             </h1>
-            <div className="text-2xl font-light tracking-[0.3em] text-[#c5a059] mb-1 font-serif select-none">
+            <div className="text-[28px] font-semibold tracking-[0.3em] text-[#c5a059] mb-2 font-serif select-none">
               圣杯飞舞
             </div>
             <div className="h-px w-10 bg-[#c5a059]/35 mb-6"></div>
-            <p className="text-sm font-light text-stone-300 tracking-widest font-serif">
+            <p className="text-[15px] font-medium text-stone-200 tracking-widest font-serif">
               吉凶自现，神明聆听中...
             </p>
           </div>
@@ -629,14 +629,14 @@ export const MainTab: React.FC<MainTabProps> = ({
 
         {cupState === CupState.LANDED && result && (
           <div className="flex flex-col items-center">
-            <h1 className="text-[10px] tracking-[0.5em] text-stone-500 uppercase mb-3 font-light select-none">
+            <h1 className="text-[11px] tracking-[0.5em] text-stone-400 uppercase mb-3 font-medium select-none">
               Ritual Answered
             </h1>
-            <div className="text-2xl font-light tracking-[0.25em] text-[#c5a059] mb-1 font-serif select-none">
+            <div className="text-[28px] font-semibold tracking-[0.25em] text-[#c5a059] mb-2 font-serif select-none">
               掷得卦象：{GUA_DATA[result].name}
             </div>
-            <div className="h-px w-10 bg-[#c5a059]/35 mb-4"></div>
-            <p className="text-xs text-stone-400 mt-1 font-serif tracking-widest">
+            <div className="h-px w-10 bg-[#c5a059]/35 mb-5"></div>
+            <p className="text-[13px] text-stone-300 mt-1 font-semibold tracking-widest">
               “{GUA_DATA[result].vernacular}”
             </p>
           </div>

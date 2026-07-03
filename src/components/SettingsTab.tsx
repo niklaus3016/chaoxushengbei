@@ -73,22 +73,22 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({
         
         {/* Settings Header */}
         <div className="text-center mb-6">
-          <h2 className="text-[#c5a059] font-serif text-lg tracking-[0.2em] font-light">系统设定</h2>
-          <p className="text-stone-500 text-xs mt-1 font-serif tracking-wide">自定专属视听气场，护持清净思绪</p>
+          <h2 className="text-[#c5a059] font-serif text-xl tracking-[0.2em] font-semibold">系统设定</h2>
+          <p className="text-stone-400 text-[12px] mt-1 font-serif tracking-wide font-medium">自定专属视听气场，护持清净思绪</p>
         </div>
 
         {/* SECTION 1: INTERACTION & AUDIO */}
         <div className="bg-stone-950 border border-stone-900 rounded-2xl p-4.5 space-y-3.5">
-          <h3 className="text-stone-400 text-xs tracking-wider flex items-center gap-2 mb-1.5 border-b border-stone-900 pb-2">
-            <Volume2 className="w-3.5 h-3.5 text-[#c5a059]" />
+          <h3 className="text-stone-300 text-[13px] tracking-wider flex items-center gap-2 mb-2 border-b border-stone-800 pb-2.5 font-semibold">
+            <Volume2 className="w-4 h-4 text-[#c5a059]" />
             <span>声色触觉反馈</span>
           </h3>
 
           {/* Master sound */}
           <div className="flex items-center justify-between">
             <div>
-              <label className="text-xs text-stone-200 block font-serif">全局音效总开关</label>
-              <span className="text-[10px] text-stone-500 font-serif tracking-wide">一键开启/停用应用内所有合成声音</span>
+              <label className="text-[13px] text-stone-100 block font-serif font-semibold">全局音效总开关</label>
+              <span className="text-[11px] text-stone-500 font-serif tracking-wide font-medium">一键开启/停用应用内所有合成声音</span>
             </div>
             <button
               id="set_master_sound"
@@ -109,8 +109,8 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({
           {settings.soundMasterEnabled && (
             <div className="flex items-center justify-between pl-3 border-l-2 border-stone-900 animate-fade-in">
               <div>
-                <label className="text-xs text-stone-300 block font-serif">抛杯与落地撞击音</label>
-                <span className="text-[10px] text-stone-500 font-serif tracking-wide">真实木材碰撞声与空中飞风啸音</span>
+                <label className="text-[13px] text-stone-200 block font-serif font-semibold">抛杯与落地撞击音</label>
+                <span className="text-[11px] text-stone-500 font-serif tracking-wide font-medium">真实木材碰撞声与空中飞风啸音</span>
               </div>
               <button
                 id="set_sfx_sound"
@@ -132,8 +132,8 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({
           {settings.soundMasterEnabled && (
             <div className="flex items-center justify-between pl-3 border-l-2 border-stone-900 animate-fade-in">
               <div>
-                <label className="text-xs text-stone-300 block font-serif">神堂罄钟余音</label>
-                <span className="text-[10px] text-stone-500 font-serif tracking-wide">开显卦象时清脆祥和的金属磬钟余韵</span>
+                <label className="text-[13px] text-stone-200 block font-serif font-semibold">神堂罄钟余音</label>
+                <span className="text-[11px] text-stone-500 font-serif tracking-wide font-medium">开显卦象时清脆祥和的金属磬钟余韵</span>
               </div>
               <button
                 id="set_bg_sound"
@@ -154,8 +154,8 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({
           {/* Vibration Switch */}
           <div className="flex items-center justify-between border-t border-stone-900/50 pt-3">
             <div>
-              <label className="text-xs text-stone-200 block font-serif">触觉振动反馈</label>
-              <span className="text-[10px] text-stone-500 font-serif tracking-wide">松手及落地震屏时的触感颤震 (需要系统支持)</span>
+              <label className="text-[13px] text-stone-100 block font-serif font-semibold">触觉振动反馈</label>
+              <span className="text-[11px] text-stone-500 font-serif tracking-wide font-medium">松手及落地震屏时的触感颤震 (需要系统支持)</span>
             </div>
             <button
               id="set_vibe"
@@ -175,16 +175,16 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({
 
         {/* SECTION 2: GRAPHICS & PERFORMANCE */}
         <div className="bg-stone-950 border border-stone-900 rounded-2xl p-4.5 space-y-3.5">
-          <h3 className="text-stone-400 text-xs tracking-wider flex items-center gap-2 mb-1.5 border-b border-stone-900 pb-2">
-            <Smartphone className="w-3.5 h-3.5 text-[#c5a059]" />
+          <h3 className="text-stone-300 text-[13px] tracking-wider flex items-center gap-2 mb-2 border-b border-stone-800 pb-2.5 font-semibold">
+            <Smartphone className="w-4 h-4 text-[#c5a059]" />
             <span>画面特效与性能</span>
           </h3>
 
           {/* Particles */}
           <div className="flex items-center justify-between">
             <div>
-              <label className="text-xs text-stone-200 block font-serif">香火香气微光粒子</label>
-              <span className="text-[10px] text-stone-500 font-serif tracking-wide">底部升华的微弱暖光浮动香氛微粒</span>
+              <label className="text-[13px] text-stone-100 block font-serif font-semibold">香火香气微光粒子</label>
+              <span className="text-[11px] text-stone-500 font-serif tracking-wide font-medium">底部升华的微弱暖光浮动香氛微粒</span>
             </div>
             <button
               id="set_particles"
@@ -204,8 +204,8 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({
           {/* Lighting */}
           <div className="flex items-center justify-between">
             <div>
-              <label className="text-xs text-stone-200 block font-serif">边缘呼吸环境光</label>
-              <span className="text-[10px] text-stone-500 font-serif tracking-wide">左右握持屏边微微浮现的呼吸暖芒条</span>
+              <label className="text-[13px] text-stone-100 block font-serif font-semibold">边缘呼吸环境光</label>
+              <span className="text-[11px] text-stone-500 font-serif tracking-wide font-medium">左右握持屏边微微浮现的呼吸暖芒条</span>
             </div>
             <button
               id="set_lighting"
@@ -225,8 +225,8 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({
           {/* Performance Selector (2D vs 3D CSS physics) */}
           <div className="flex items-center justify-between border-t border-stone-900/50 pt-3">
             <div>
-              <label className="text-xs text-stone-200 block font-serif">性能适配模式</label>
-              <span className="text-[10px] text-stone-500 font-serif tracking-wide">
+              <label className="text-[13px] text-stone-100 block font-serif font-semibold">性能适配模式</label>
+              <span className="text-[11px] text-stone-500 font-serif tracking-wide font-medium">
                 {settings.performanceMode === '3D' ? '当前处于：3D立体翻转特效（推荐）' : '当前处于：2D极简轻量模式（低配机顺畅）'}
               </span>
             </div>
@@ -255,15 +255,15 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({
 
         {/* SECTION 3: SYSTEM DATA PRUNING */}
         <div className="bg-stone-950 border border-stone-900 rounded-2xl p-4.5 space-y-3.5">
-          <h3 className="text-stone-400 text-xs tracking-wider flex items-center gap-2 mb-1.5 border-b border-stone-900 pb-2">
-            <Trash2 className="w-3.5 h-3.5 text-red-400" />
+          <h3 className="text-stone-300 text-[13px] tracking-wider flex items-center gap-2 mb-2 border-b border-stone-800 pb-2.5 font-semibold">
+            <Trash2 className="w-4 h-4 text-red-400" />
             <span>本地存储空间治理</span>
           </h3>
 
           <div className="flex items-center justify-between">
             <div>
-              <label className="text-xs text-stone-200 block font-serif">重置愿望自定义模板</label>
-              <span className="text-[10px] text-stone-500 font-serif tracking-wide">还原为默认的五大类民间吉利文案</span>
+              <label className="text-[13px] text-stone-100 block font-serif font-semibold">重置愿望自定义模板</label>
+              <span className="text-[11px] text-stone-500 font-serif tracking-wide font-medium">还原为默认的五大类民间吉利文案</span>
             </div>
             <button
               id="reset_templates_direct_btn"
@@ -276,8 +276,8 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({
 
           <div className="flex items-center justify-between border-t border-stone-900/50 pt-3">
             <div>
-              <label className="text-xs text-stone-200 block font-serif">清空本地全部卦录历史</label>
-              <span className="text-[10px] text-stone-500 font-serif tracking-wide">清空所有存底记录，不可逆转</span>
+              <label className="text-[13px] text-stone-100 block font-serif font-semibold">清空本地全部卦录历史</label>
+              <span className="text-[11px] text-stone-500 font-serif tracking-wide font-medium">清空所有存底记录，不可逆转</span>
             </div>
             <button
               id="clear_history_direct_btn"
@@ -291,8 +291,8 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({
 
         {/* SECTION 4: LEGAL & INFO DOCUMENTATION */}
         <div className="bg-stone-950 border border-stone-900 rounded-2xl p-4.5 space-y-3">
-          <h3 className="text-stone-400 text-xs tracking-wider flex items-center gap-2 mb-1 border-b border-stone-900 pb-2">
-            <Shield className="w-3.5 h-3.5 text-[#c5a059]" />
+          <h3 className="text-stone-300 text-[13px] tracking-wider flex items-center gap-2 mb-2 border-b border-stone-800 pb-2.5 font-semibold">
+            <Shield className="w-4 h-4 text-[#c5a059]" />
             <span>法律合规与文化声明</span>
           </h3>
 
@@ -339,7 +339,7 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({
         <div className="fixed inset-0 bg-black/95 flex items-center justify-center z-50 p-4 backdrop-blur-md animate-fade-in">
           <div className="bg-stone-950 border border-stone-900 rounded-2xl p-5 max-w-sm w-full max-h-[80vh] overflow-y-auto">
             <div className="flex items-center justify-between border-b border-stone-900 pb-3 mb-3">
-              <h3 className="text-[#c5a059] font-serif font-light text-sm tracking-wide">免责与健康生活声明</h3>
+              <h3 className="text-[#c5a059] font-serif font-semibold text-sm tracking-wide">免责与健康生活声明</h3>
               <button
                 id="close_disclaimer_modal_btn"
                 onClick={() => setShowDisclaimerModal(false)}
@@ -380,7 +380,7 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({
         <div className="fixed inset-0 bg-black/95 flex items-center justify-center z-50 p-4 backdrop-blur-md animate-fade-in">
           <div className="bg-stone-950 border border-stone-900 rounded-2xl p-5 max-w-sm w-full max-h-[80vh] overflow-y-auto text-left">
             <div className="flex items-center justify-between border-b border-stone-900 pb-3 mb-3">
-              <h3 className="text-[#c5a059] font-serif font-light text-sm tracking-wide">潮序圣杯 • 产品缘起</h3>
+              <h3 className="text-[#c5a059] font-serif font-semibold text-sm tracking-wide">潮序圣杯 • 产品缘起</h3>
               <button
                 id="close_about_modal_btn"
                 onClick={() => setShowAboutModal(false)}

@@ -1,7 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;700;900&family=JetBrains+Mono:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ===== Safe Area (iPhone/Android 状态栏/底部手势条) 自定义工具 ===== */
+@layer utilities {
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0.75rem);
+  }
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0.75rem);
+  }
+  .px-safe-x {
+    padding-left: env(safe-area-inset-left, 0);
+    padding-right: env(safe-area-inset-right, 0);
+  }
+}
+
+/* ===== 全局字体字重基线：中文深色背景下 400 会发虚，整体 +1 级加粗 ===== */
+@layer base {
+  html, body {
+    font-weight: 500; /* 默认正文从 400 → 500，中文字在 OLED/低亮度更可读 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
+  }
+  body {
+    background-color: #0c0c0e;
+    color: #e5e7eb;
+    overflow: hidden;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+  }
+  /* serif 衬线（所有大字标题）默认从 400 → 500 打底 */
+  .font-serif {
+    font-weight: 500;
+    font-stretch: normal;
+  }
+  /* mono 等宽（英文小标签）从 400 → 500 */
+  .font-mono {
+    font-weight: 500;
+    letter-spacing: 0.01em;
+  }
+}
 
 /* Custom Micro-Animations */
 @keyframes fadeIn {
@@ -70,13 +112,4 @@
   .gold-box-shadow {
     box-shadow: 0 0 20px rgba(223, 184, 108, 0.15);
   }
-}
-
-body {
-  background-color: #0c0c0e;
-  color: #e5e7eb;
-  overflow: hidden;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
-  font-family: ui-sans-serif, system-ui, sans-serif;
 }

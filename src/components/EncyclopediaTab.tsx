@@ -17,7 +17,7 @@ export const EncyclopediaTab: React.FC = () => {
         <span className="inline-block px-3 py-1 bg-[#c5a059]/10 text-[#c5a059] text-[10px] font-serif border border-[#c5a059]/20 rounded-md tracking-widest uppercase mb-2">
           非物质文化遗产科普
         </span>
-        <h2 className="text-[#c5a059] font-serif text-xl tracking-[0.25em] font-light">
+        <h2 className="text-[#c5a059] font-serif text-2xl tracking-[0.25em] font-semibold">
           潮汕圣杯民俗百科
         </h2>
         <p className="text-stone-500 text-xs mt-1.5 font-serif tracking-wider">

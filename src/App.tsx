@@ -198,46 +198,48 @@ export default function App() {
         <div className="glow-guide absolute left-0 top-0 bottom-0 w-1.5 z-10 pointer-events-none" />
         <div className="glow-guide absolute right-0 top-0 bottom-0 w-1.5 z-10 pointer-events-none" />
       
-      {/* 1. TOP APP BAR HEADER: Clean display typography */}
-      <header className="w-full h-18 border-b border-stone-900/60 px-5 flex items-center justify-between z-30 bg-black/45 backdrop-blur-md shrink-0">
-        <div className="flex items-center gap-2.5">
-          {/* Custom sacred incense burner vector icon styled elegantly */}
-          <div className="w-8 h-8 rounded-full bg-[#0a0a0c] border border-[#c5a059]/30 flex items-center justify-center shadow-lg">
-            <Compass className="w-4 h-4 text-[#c5a059] animate-pulse" />
+      {/* 1. TOP APP BAR HEADER: Clean display typography + safe area */}
+      <header className="w-full pt-safe px-5 z-30 shrink-0">
+        <div className="h-20 border-b border-stone-900/60 bg-black/45 backdrop-blur-md flex items-center justify-between px-1 -mx-1 rounded-none">
+          <div className="flex items-center gap-3">
+            {/* Custom sacred incense burner vector icon styled elegantly */}
+            <div className="w-9 h-9 rounded-full bg-[#0a0a0c] border border-[#c5a059]/30 flex items-center justify-center shadow-lg">
+              <Compass className="w-[18px] h-[18px] text-[#c5a059] animate-pulse" />
+            </div>
+            <div className="text-left leading-tight">
+              <h1 className="text-[#c5a059] font-serif font-semibold text-[15px] tracking-[0.22em]">
+                潮序圣杯
+              </h1>
+              <span className="text-[10px] text-stone-500 font-serif tracking-[0.18em] uppercase block mt-1 select-none">
+                Traditional Heritage
+              </span>
+            </div>
           </div>
-          <div className="text-left">
-            <h1 className="text-[#c5a059] font-serif font-medium text-sm tracking-[0.25em]">
-              潮序圣杯
-            </h1>
-            <span className="text-[8px] text-stone-500 font-serif tracking-[0.2em] uppercase block mt-0.5 select-none">
-              Traditional Heritage
-            </span>
-          </div>
-        </div>
 
-        {/* Beautiful Original Aura/Theme selection badge */}
-        <div className="flex items-center gap-1 bg-[#0a0a0c] border border-stone-900 p-0.5 rounded-lg text-[10px] font-serif">
-          {(['sitan', 'cici', 'suian'] as const).map((id) => (
-            <button
-              key={id}
-              id={`theme_badge_${id}`}
-              onClick={() => handleThemeChange(id)}
-              className={`px-2.5 py-1 rounded transition-all whitespace-nowrap cursor-pointer ${
-                themeId === id
-                  ? 'bg-[#c5a059]/10 text-[#c5a059] border border-[#c5a059]/30 shadow-sm font-medium'
-                  : 'text-stone-500 hover:text-stone-300'
-              }`}
-            >
-              {id === 'sitan' && '静檀'}
-              {id === 'cici' && '祠堂'}
-              {id === 'suian' && '岁安'}
-            </button>
-          ))}
+          {/* Beautiful Original Aura/Theme selection badge */}
+          <div className="flex items-center gap-1 bg-[#0a0a0c] border border-stone-900 p-0.5 rounded-lg text-[11px] font-serif">
+            {(['sitan', 'cici', 'suian'] as const).map((id) => (
+              <button
+                key={id}
+                id={`theme_badge_${id}`}
+                onClick={() => handleThemeChange(id)}
+                className={`px-3 py-1.5 rounded-md transition-all whitespace-nowrap cursor-pointer ${
+                  themeId === id
+                    ? 'bg-[#c5a059]/10 text-[#c5a059] border border-[#c5a059]/30 shadow-sm font-semibold'
+                    : 'text-stone-400 hover:text-stone-200 font-medium'
+                }`}
+              >
+                {id === 'sitan' && '静檀'}
+                {id === 'cici' && '祠堂'}
+                {id === 'suian' && '岁安'}
+              </button>
+            ))}
+          </div>
         </div>
       </header>
 
       {/* 2. MAIN ACTIVE TAB WORKSPACE CONTAINER */}
-      <main className="flex-1 w-full relative z-20 overflow-hidden bg-transparent">
+      <main className="flex-1 w-full relative z-20 overflow-y-auto overflow-x-hidden bg-transparent pt-3 pb-safe">
         {activeTab === 'throw' && (
           <MainTab
             settings={settings}
@@ -282,9 +284,9 @@ export default function App() {
             activeTab === 'throw' ? 'text-[#c5a059] border-[#c5a059]' : 'text-stone-500 hover:text-stone-400 border-transparent'
           }`}
         >
-          <Flame className={`w-4 h-4 mb-0.5 transition-transform duration-300 ${activeTab === 'throw' ? 'scale-110' : ''}`} />
-          <span className="text-[10px] font-serif tracking-[0.15em] font-medium">首页</span>
-          <span className="text-[7.5px] font-mono tracking-wider opacity-50 uppercase">RITUAL</span>
+          <Flame className={`w-[18px] h-[18px] mb-0.5 transition-transform duration-300 ${activeTab === 'throw' ? 'scale-110' : ''}`} />
+          <span className="text-[11px] font-serif tracking-[0.15em] font-semibold">首页</span>
+          <span className="text-[8px] font-mono tracking-wider opacity-60 uppercase font-semibold">RITUAL</span>
         </button>
 
         {/* Tab 2: 卦录历史 HISTORY */}
@@ -295,9 +297,9 @@ export default function App() {
             activeTab === 'history' ? 'text-[#c5a059] border-[#c5a059]' : 'text-stone-500 hover:text-stone-400 border-transparent'
           }`}
         >
-          <Archive className={`w-4 h-4 mb-0.5 transition-transform duration-300 ${activeTab === 'history' ? 'scale-110' : ''}`} />
-          <span className="text-[10px] font-serif tracking-[0.15em] font-medium">卦录</span>
-          <span className="text-[7.5px] font-mono tracking-wider opacity-50 uppercase">HISTORY</span>
+          <Archive className={`w-[18px] h-[18px] mb-0.5 transition-transform duration-300 ${activeTab === 'history' ? 'scale-110' : ''}`} />
+          <span className="text-[11px] font-serif tracking-[0.15em] font-semibold">卦录</span>
+          <span className="text-[8px] font-mono tracking-wider opacity-60 uppercase font-semibold">HISTORY</span>
           {records.length > 0 && (
             <span className="absolute top-2 right-2 bg-red-600 text-white font-sans text-[8px] px-1 py-0.2 rounded-full min-w-3.5 text-center leading-tight">
               {records.length > 99 ? '99+' : records.length}
@@ -313,9 +315,9 @@ export default function App() {
             activeTab === 'ency' ? 'text-[#c5a059] border-[#c5a059]' : 'text-stone-500 hover:text-stone-400 border-transparent'
           }`}
         >
-          <BookOpen className={`w-4 h-4 mb-0.5 transition-transform duration-300 ${activeTab === 'ency' ? 'scale-110' : ''}`} />
-          <span className="text-[10px] font-serif tracking-[0.15em] font-medium">百科</span>
-          <span className="text-[7.5px] font-mono tracking-wider opacity-50 uppercase">ARCHIVE</span>
+          <BookOpen className={`w-[18px] h-[18px] mb-0.5 transition-transform duration-300 ${activeTab === 'ency' ? 'scale-110' : ''}`} />
+          <span className="text-[11px] font-serif tracking-[0.15em] font-semibold">百科</span>
+          <span className="text-[8px] font-mono tracking-wider opacity-60 uppercase font-semibold">ARCHIVE</span>
         </button>
 
         {/* Tab 4: 设置中心 SETTINGS */}
@@ -326,9 +328,9 @@ export default function App() {
             activeTab === 'settings' ? 'text-[#c5a059] border-[#c5a059]' : 'text-stone-500 hover:text-stone-400 border-transparent'
           }`}
         >
-          <Settings className={`w-4 h-4 mb-0.5 transition-transform duration-300 ${activeTab === 'settings' ? 'scale-110 rotate-45' : ''}`} />
-          <span className="text-[10px] font-serif tracking-[0.15em] font-medium">设置</span>
-          <span className="text-[7.5px] font-mono tracking-wider opacity-50 uppercase">SETTINGS</span>
+          <Settings className={`w-[18px] h-[18px] mb-0.5 transition-transform duration-300 ${activeTab === 'settings' ? 'scale-110 rotate-45' : ''}`} />
+          <span className="text-[11px] font-serif tracking-[0.15em] font-semibold">设置</span>
+          <span className="text-[8px] font-mono tracking-wider opacity-60 uppercase font-semibold">SETTINGS</span>
         </button>
 
       </nav>

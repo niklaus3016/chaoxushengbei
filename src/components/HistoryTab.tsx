@@ -71,8 +71,8 @@ export const HistoryTab: React.FC<HistoryTabProps> = ({
       {/* Title & Stats */}
       <div className="max-w-md mx-auto flex items-center justify-between mb-5 select-none">
         <div>
-          <h2 className="text-[#c5a059] font-serif text-lg tracking-widest font-light">卦录历史</h2>
-          <p className="text-stone-500 text-[11px] font-serif mt-0.5">
+          <h2 className="text-[#c5a059] font-serif text-xl tracking-widest font-semibold">卦录历史</h2>
+          <p className="text-stone-400 text-[12px] font-serif mt-1 font-medium">
             共存有 <span className="text-[#c5a059] font-mono font-medium">{records.length}</span> 条虔诚问卜记录
           </p>
         </div>
